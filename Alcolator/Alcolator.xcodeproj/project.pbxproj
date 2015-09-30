@@ -16,6 +16,10 @@
 		8C5EA5901BBB97E000B07205 /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EA58F1BBB97E000B07205 /* AlcolatorTests.m */; };
 		8C5EA59B1BBB97E000B07205 /* AlcolatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EA59A1BBB97E000B07205 /* AlcolatorUITests.m */; };
 		8CD08AF61BBC487400E5E6A8 /* WhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD08AF51BBC487400E5E6A8 /* WhiskeyViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8CE342FC1BBC5CDA00F7681B /* AlcoholicBeverage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE342FB1BBC5CDA00F7681B /* AlcoholicBeverage.m */; settings = {ASSET_TAGS = (); }; };
+		8CE342FF1BBC5EFF00F7681B /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE342FE1BBC5EFF00F7681B /* Beer.m */; settings = {ASSET_TAGS = (); }; };
+		8CE343021BBC606C00F7681B /* Wine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE343011BBC606C00F7681B /* Wine.m */; settings = {ASSET_TAGS = (); }; };
+		8CE343051BBC60FE00F7681B /* Whiskey.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE343041BBC60FE00F7681B /* Whiskey.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,14 @@
 		8C5EA59C1BBB97E000B07205 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD08AF41BBC487400E5E6A8 /* WhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiskeyViewController.h; sourceTree = "<group>"; };
 		8CD08AF51BBC487400E5E6A8 /* WhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiskeyViewController.m; sourceTree = "<group>"; };
+		8CE342FA1BBC5CDA00F7681B /* AlcoholicBeverage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlcoholicBeverage.h; sourceTree = "<group>"; };
+		8CE342FB1BBC5CDA00F7681B /* AlcoholicBeverage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlcoholicBeverage.m; sourceTree = "<group>"; };
+		8CE342FD1BBC5EFF00F7681B /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
+		8CE342FE1BBC5EFF00F7681B /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
+		8CE343001BBC606C00F7681B /* Wine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wine.h; sourceTree = "<group>"; };
+		8CE343011BBC606C00F7681B /* Wine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wine.m; sourceTree = "<group>"; };
+		8CE343031BBC60FE00F7681B /* Whiskey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Whiskey.h; sourceTree = "<group>"; };
+		8CE343041BBC60FE00F7681B /* Whiskey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Whiskey.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +116,11 @@
 		8C5EA5741BBB97E000B07205 /* Alcolator */ = {
 			isa = PBXGroup;
 			children = (
+				8CE342F91BBC5CBF00F7681B /* Model */,
+				8CE342F71BBC5C9B00F7681B /* View */,
+				8CE342F81BBC5CA100F7681B /* Controller */,
 				8C5EA5781BBB97E000B07205 /* AppDelegate.h */,
 				8C5EA5791BBB97E000B07205 /* AppDelegate.m */,
-				8C5EA57B1BBB97E000B07205 /* ViewController.h */,
-				8C5EA57C1BBB97E000B07205 /* ViewController.m */,
-				8CD08AF41BBC487400E5E6A8 /* WhiskeyViewController.h */,
-				8CD08AF51BBC487400E5E6A8 /* WhiskeyViewController.m */,
 				8C5EA57E1BBB97E000B07205 /* Main.storyboard */,
 				8C5EA5811BBB97E000B07205 /* Assets.xcassets */,
 				8C5EA5831BBB97E000B07205 /* LaunchScreen.storyboard */,
@@ -143,6 +154,39 @@
 				8C5EA59C1BBB97E000B07205 /* Info.plist */,
 			);
 			path = AlcolatorUITests;
+			sourceTree = "<group>";
+		};
+		8CE342F71BBC5C9B00F7681B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C5EA57B1BBB97E000B07205 /* ViewController.h */,
+				8C5EA57C1BBB97E000B07205 /* ViewController.m */,
+				8CD08AF41BBC487400E5E6A8 /* WhiskeyViewController.h */,
+				8CD08AF51BBC487400E5E6A8 /* WhiskeyViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8CE342F81BBC5CA100F7681B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8CE342F91BBC5CBF00F7681B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CE342FA1BBC5CDA00F7681B /* AlcoholicBeverage.h */,
+				8CE342FB1BBC5CDA00F7681B /* AlcoholicBeverage.m */,
+				8CE342FD1BBC5EFF00F7681B /* Beer.h */,
+				8CE342FE1BBC5EFF00F7681B /* Beer.m */,
+				8CE343001BBC606C00F7681B /* Wine.h */,
+				8CE343011BBC606C00F7681B /* Wine.m */,
+				8CE343031BBC60FE00F7681B /* Whiskey.h */,
+				8CE343041BBC60FE00F7681B /* Whiskey.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE343051BBC60FE00F7681B /* Whiskey.m in Sources */,
+				8CE342FC1BBC5CDA00F7681B /* AlcoholicBeverage.m in Sources */,
 				8C5EA57D1BBB97E000B07205 /* ViewController.m in Sources */,
 				8CD08AF61BBC487400E5E6A8 /* WhiskeyViewController.m in Sources */,
+				8CE342FF1BBC5EFF00F7681B /* Beer.m in Sources */,
 				8C5EA57A1BBB97E000B07205 /* AppDelegate.m in Sources */,
+				8CE343021BBC606C00F7681B /* Wine.m in Sources */,
 				8C5EA5771BBB97E000B07205 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
