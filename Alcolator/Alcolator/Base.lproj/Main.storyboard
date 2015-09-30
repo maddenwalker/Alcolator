@@ -33,7 +33,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-55-JBA">
-                                <rect key="frame" x="35" y="176" width="530" height="29"/>
+                                <rect key="frame" x="240" y="176" width="120" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -46,14 +46,22 @@
                             <constraint firstItem="2Ny-gs-cFU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8qb-uB-oCq"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DIm-P6-oIp"/>
                             <constraint firstItem="XcM-55-JBA" firstAttribute="top" secondItem="2Ny-gs-cFU" secondAttribute="bottom" constant="21" id="E3a-Uv-Dlp"/>
+                            <constraint firstItem="XcM-55-JBA" firstAttribute="width" secondItem="2Ny-gs-cFU" secondAttribute="width" id="QRo-mb-j4z"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="width" secondItem="Oyf-hl-kPV" secondAttribute="width" id="Qho-Ja-2U6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XcM-55-JBA" secondAttribute="trailing" constant="15" id="YGH-5S-Ocv"/>
                             <constraint firstItem="Oyf-hl-kPV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZDH-25-AdM"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="top" secondItem="Oyf-hl-kPV" secondAttribute="bottom" constant="8" id="buc-1J-ljq"/>
                             <constraint firstItem="2Ny-gs-cFU" firstAttribute="top" secondItem="nb0-Lb-KMF" secondAttribute="bottom" constant="22" id="kFD-HL-sjz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oyf-hl-kPV" secondAttribute="trailing" id="p1U-pN-bej"/>
+                            <constraint firstItem="XcM-55-JBA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wCF-J0-Nr3"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Oyf-hl-kPV" secondAttribute="leading" id="zSY-dA-ery"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Ti-ZX-iR0"/>
+                                <exclude reference="YGH-5S-Ocv"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="m1U-d2-3Tb" appends="YES" id="GkT-bn-EPC"/>
                         </connections>
