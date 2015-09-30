@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cdM-9T-NAT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="55Z-EB-5pH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Wine-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-hl-kPV">
-                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <rect key="frame" x="20" y="74" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -26,13 +26,13 @@
                                 </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="nb0-Lb-KMF">
-                                <rect key="frame" x="18" y="58" width="564" height="31"/>
+                                <rect key="frame" x="18" y="112" width="564" height="31"/>
                                 <connections>
                                     <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="6xp-bJ-aU4"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-gs-cFU">
-                                <rect key="frame" x="240" y="110" width="120" height="45"/>
+                                <rect key="frame" x="240" y="164" width="120" height="45"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-55-JBA">
-                                <rect key="frame" x="35" y="176" width="530" height="29"/>
+                                <rect key="frame" x="35" y="230" width="530" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="XcM-55-JBA" firstAttribute="top" secondItem="2Ny-gs-cFU" secondAttribute="bottom" constant="21" id="E3a-Uv-Dlp"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="width" secondItem="Oyf-hl-kPV" secondAttribute="width" id="Qho-Ja-2U6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XcM-55-JBA" secondAttribute="trailing" constant="15" id="YGH-5S-Ocv"/>
-                            <constraint firstItem="Oyf-hl-kPV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZDH-25-AdM"/>
+                            <constraint firstItem="Oyf-hl-kPV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ZDH-25-AdM"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="top" secondItem="Oyf-hl-kPV" secondAttribute="bottom" constant="8" id="buc-1J-ljq"/>
                             <constraint firstItem="2Ny-gs-cFU" firstAttribute="top" secondItem="nb0-Lb-KMF" secondAttribute="bottom" constant="22" id="kFD-HL-sjz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oyf-hl-kPV" secondAttribute="trailing" id="p1U-pN-bej"/>
@@ -67,6 +67,7 @@
                             <outletCollection property="gestureRecognizers" destination="m1U-d2-3Tb" appends="YES" id="GkT-bn-EPC"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Wine" id="dYV-xF-CxA"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="nb0-Lb-KMF" id="Xxw-vp-Qen"/>
                         <outlet property="beerPercentTextField" destination="Oyf-hl-kPV" id="6Rd-3w-FHd"/>
@@ -80,9 +81,56 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="389" y="437"/>
+            <point key="canvasLocation" x="1338" y="-40"/>
         </scene>
-        <!--Whiskey View Controller-->
+        <!--Select Alcolator-->
+        <scene sceneID="S3R-vC-0vK">
+            <objects>
+                <viewController id="XZx-ra-NqY" customClass="MainMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kw1-ca-dqC"/>
+                        <viewControllerLayoutGuide type="bottom" id="iZZ-Y3-RgH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aBq-CB-qaf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-jF-mBb">
+                                <rect key="frame" x="248" y="119" width="105" height="73"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
+                                <state key="normal" title="Wine">
+                                    <color key="titleColor" red="0.44705882352941173" green="0.18431372549019609" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="31o-MX-QfG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ng3-7X-eBu">
+                                <rect key="frame" x="221" y="232" width="159" height="76"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
+                                <state key="normal" title="Whiskey">
+                                    <color key="titleColor" red="0.70196078431372544" green="0.40784313725490196" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cdM-9T-NAT" kind="show" id="n6c-Lf-oSC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fqj-jF-mBb" firstAttribute="centerX" secondItem="aBq-CB-qaf" secondAttribute="centerX" id="Vkg-Sd-get"/>
+                            <constraint firstItem="fqj-jF-mBb" firstAttribute="top" secondItem="kw1-ca-dqC" secondAttribute="bottom" constant="55" id="g7d-7W-Pbu"/>
+                            <constraint firstItem="Ng3-7X-eBu" firstAttribute="top" secondItem="fqj-jF-mBb" secondAttribute="bottom" constant="40" id="lD5-mu-Qm3"/>
+                            <constraint firstItem="Ng3-7X-eBu" firstAttribute="centerX" secondItem="aBq-CB-qaf" secondAttribute="centerX" id="qEO-uX-6b0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select Alcolator" id="U5V-WW-1h5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5u-oc-vWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="411"/>
+        </scene>
+        <!--Whiskey-->
         <scene sceneID="sIa-Dd-4ds">
             <objects>
                 <viewController id="cdM-9T-NAT" customClass="WhiskeyViewController" sceneMemberID="viewController">
@@ -95,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bkX-Uw-VLN">
-                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <rect key="frame" x="20" y="74" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -103,13 +151,19 @@
                                 </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="kKZ-bv-OHS">
-                                <rect key="frame" x="18" y="58" width="564" height="31"/>
+                                <rect key="frame" x="18" y="112" width="564" height="31"/>
                                 <connections>
                                     <action selector="sliderValueDidChange:" destination="cdM-9T-NAT" eventType="valueChanged" id="14W-gF-QPJ"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ky-qK-aSf">
+                                <rect key="frame" x="35" y="230" width="530" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ria-Ge-eHl">
-                                <rect key="frame" x="240" y="110" width="120" height="45"/>
+                                <rect key="frame" x="240" y="164" width="120" height="45"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,12 +172,6 @@
                                     <action selector="buttonPressed:" destination="cdM-9T-NAT" eventType="touchUpInside" id="07M-9A-gU0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ky-qK-aSf">
-                                <rect key="frame" x="35" y="176" width="530" height="29"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -138,9 +186,10 @@
                             <constraint firstItem="kKZ-bv-OHS" firstAttribute="top" secondItem="bkX-Uw-VLN" secondAttribute="bottom" constant="8" id="lYK-hE-MTd"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bkX-Uw-VLN" secondAttribute="leading" id="nG5-bU-hAa"/>
                             <constraint firstItem="kKZ-bv-OHS" firstAttribute="centerX" secondItem="wlQ-W5-Gb7" secondAttribute="centerX" id="vv7-yY-cLL"/>
-                            <constraint firstItem="bkX-Uw-VLN" firstAttribute="top" secondItem="Lbm-bH-9hx" secondAttribute="bottom" id="zyo-0H-rUq"/>
+                            <constraint firstItem="bkX-Uw-VLN" firstAttribute="top" secondItem="Lbm-bH-9hx" secondAttribute="bottom" constant="10" id="zyo-0H-rUq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Whiskey" id="3rE-pQ-qdd"/>
                     <connections>
                         <outlet property="beerCountSlider" destination="kKZ-bv-OHS" id="hUa-6C-630"/>
                         <outlet property="beerPercentTextField" destination="bkX-Uw-VLN" id="GMQ-70-crk"/>
@@ -149,7 +198,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyw-68-rTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255" y="437"/>
+            <point key="canvasLocation" x="1338" y="683"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Qf-7U-IcZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="55Z-EB-5pH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l7k-4R-G9t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XZx-ra-NqY" kind="relationship" relationship="rootViewController" id="2nr-eq-kpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vmA-Sa-DNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="411"/>
         </scene>
     </scenes>
 </document>

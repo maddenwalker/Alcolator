@@ -20,6 +20,7 @@
 		8CE342FF1BBC5EFF00F7681B /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE342FE1BBC5EFF00F7681B /* Beer.m */; settings = {ASSET_TAGS = (); }; };
 		8CE343021BBC606C00F7681B /* Wine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE343011BBC606C00F7681B /* Wine.m */; settings = {ASSET_TAGS = (); }; };
 		8CE343051BBC60FE00F7681B /* Whiskey.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE343041BBC60FE00F7681B /* Whiskey.m */; settings = {ASSET_TAGS = (); }; };
+		8CE979961BBC7C0500B65117 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE979951BBC7C0500B65117 /* MainMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		8CE343011BBC606C00F7681B /* Wine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wine.m; sourceTree = "<group>"; };
 		8CE343031BBC60FE00F7681B /* Whiskey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Whiskey.h; sourceTree = "<group>"; };
 		8CE343041BBC60FE00F7681B /* Whiskey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Whiskey.m; sourceTree = "<group>"; };
+		8CE979941BBC7C0500B65117 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		8CE979951BBC7C0500B65117 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 		8CE342F71BBC5C9B00F7681B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8CE979941BBC7C0500B65117 /* MainMenuViewController.h */,
+				8CE979951BBC7C0500B65117 /* MainMenuViewController.m */,
 				8C5EA57B1BBB97E000B07205 /* ViewController.h */,
 				8C5EA57C1BBB97E000B07205 /* ViewController.m */,
 				8CD08AF41BBC487400E5E6A8 /* WhiskeyViewController.h */,
@@ -323,6 +328,7 @@
 				8CE342FC1BBC5CDA00F7681B /* AlcoholicBeverage.m in Sources */,
 				8C5EA57D1BBB97E000B07205 /* ViewController.m in Sources */,
 				8CD08AF61BBC487400E5E6A8 /* WhiskeyViewController.m in Sources */,
+				8CE979961BBC7C0500B65117 /* MainMenuViewController.m in Sources */,
 				8CE342FF1BBC5EFF00F7681B /* Beer.m in Sources */,
 				8C5EA57A1BBB97E000B07205 /* AppDelegate.m in Sources */,
 				8CE343021BBC606C00F7681B /* Wine.m in Sources */,
