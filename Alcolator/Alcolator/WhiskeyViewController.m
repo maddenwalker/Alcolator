@@ -23,7 +23,7 @@
     int numberOfBeers = self.beerCountSlider.value;
     
     Beer *myBeer = [[Beer alloc] init];
-    myBeer.alcoholicPercentage = [self.beerPercentTextField.text floatValue];
+    myBeer.alcoholicPercentage = [self.beerPercentTextField.text floatValue] / 100;
     
     Whiskey *myWhiskey = [[Whiskey alloc] init];
     float numberOfWhiskeyGlassesEquivalentToNumberOfBeers = [myWhiskey convertAlcoholicServings:[myBeer ouncesOfAlcoholTotal:numberOfBeers]];
