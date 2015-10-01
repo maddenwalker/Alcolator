@@ -14,10 +14,8 @@
 @property int numberOfBeers;
 @property float beerAlcoholPercentageContent;
 
--(float)convertBeerToWine;
--(float)convertBeerToWhiskey;
-
 -(void)updateBeerAlcoholContent:(float)newAlcoholPercentageContent;
 -(NSString *)vesselDescription:(NSString *)typeOfAlcohol;
+-(float)convertBeerTo:(NSString *)typeOfAlcohol;
 
 @end

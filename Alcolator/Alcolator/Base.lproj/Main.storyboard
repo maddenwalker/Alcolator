@@ -8,7 +8,7 @@
         <!--Wine-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Wine" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -121,7 +121,7 @@
         <!--Whiskey-->
         <scene sceneID="sIa-Dd-4ds">
             <objects>
-                <viewController id="cdM-9T-NAT" customClass="WhiskeyViewController" sceneMemberID="viewController">
+                <viewController title="Whiskey" id="cdM-9T-NAT" customClass="WhiskeyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lbm-bH-9hx"/>
                         <viewControllerLayoutGuide type="bottom" id="fVC-SL-q7l"/>
@@ -145,32 +145,20 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ky-qK-aSf">
-                                <rect key="frame" x="35" y="230" width="530" height="29"/>
+                                <rect key="frame" x="35" y="182" width="530" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ria-Ge-eHl">
-                                <rect key="frame" x="240" y="164" width="120" height="45"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
-                                <state key="normal" title="Calculate!">
-                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="cdM-9T-NAT" eventType="touchUpInside" id="07M-9A-gU0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bkX-Uw-VLN" secondAttribute="trailing" id="BnN-op-Y7k"/>
+                            <constraint firstItem="1ky-qK-aSf" firstAttribute="top" secondItem="kKZ-bv-OHS" secondAttribute="bottom" constant="40" id="FMn-vT-UYc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1ky-qK-aSf" secondAttribute="trailing" constant="15" id="Vuh-F7-lVs"/>
                             <constraint firstItem="kKZ-bv-OHS" firstAttribute="width" secondItem="bkX-Uw-VLN" secondAttribute="width" id="be2-eA-QYQ"/>
-                            <constraint firstItem="1ky-qK-aSf" firstAttribute="top" secondItem="ria-Ge-eHl" secondAttribute="bottom" constant="21" id="edN-Pz-QA7"/>
-                            <constraint firstItem="ria-Ge-eHl" firstAttribute="centerX" secondItem="wlQ-W5-Gb7" secondAttribute="centerX" id="gfK-2A-kUP"/>
                             <constraint firstItem="1ky-qK-aSf" firstAttribute="leading" secondItem="wlQ-W5-Gb7" secondAttribute="leadingMargin" constant="15" id="hyZ-x1-i9u"/>
-                            <constraint firstItem="ria-Ge-eHl" firstAttribute="top" secondItem="kKZ-bv-OHS" secondAttribute="bottom" constant="22" id="jke-jF-GTw"/>
                             <constraint firstItem="kKZ-bv-OHS" firstAttribute="top" secondItem="bkX-Uw-VLN" secondAttribute="bottom" constant="8" id="lYK-hE-MTd"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bkX-Uw-VLN" secondAttribute="leading" id="nG5-bU-hAa"/>
                             <constraint firstItem="kKZ-bv-OHS" firstAttribute="centerX" secondItem="wlQ-W5-Gb7" secondAttribute="centerX" id="vv7-yY-cLL"/>

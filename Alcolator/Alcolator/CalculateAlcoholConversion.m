@@ -40,20 +40,22 @@
 }
 
 
--(float)convertBeerToWine {
-    return [self.myWine convertAlcoholicServings:[self.myBeer ouncesOfAlcoholTotal:self.numberOfBeers]];
-}
+-(float)convertBeerTo:(NSString *)typeOfAlcohol {
+    
+    if ( [typeOfAlcohol isEqualToString:@"Wine"] ) {
+        return [self.myWine convertAlcoholicServings:[self.myBeer ouncesOfAlcoholTotal:self.numberOfBeers]];
+    } else {
+        return [self.myWhiskey convertAlcoholicServings:[self.myBeer ouncesOfAlcoholTotal:self.numberOfBeers]];
+    }
 
--(float)convertBeerToWhiskey {
-    return [self.myWhiskey convertAlcoholicServings:[self.myBeer ouncesOfAlcoholTotal:self.numberOfBeers]];
 }
 
 -(NSString *)vesselDescription:(NSString *)typeOfAlcohol {
     
     if ( [typeOfAlcohol isEqualToString:@"Wine"] ) {
-        return [self.myWine vesselDescriptor:[NSNumber numberWithFloat:self.convertBeerToWine]];
+        return [self.myWine vesselDescriptor:[NSNumber numberWithFloat:[self convertBeerTo:@"Wine"]]];
     } else if ( [typeOfAlcohol isEqualToString:@"Whiskey"] ) {
-        return [self.myWhiskey vesselDescriptor:[NSNumber numberWithFloat:self.convertBeerToWhiskey]];
+        return [self.myWhiskey vesselDescriptor:[NSNumber numberWithFloat:[self convertBeerTo:@"Whiskey"]]];
     } else {
         return [self.myBeer vesselDescriptor:self.numberOfBeers];
     }

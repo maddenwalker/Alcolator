@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.nameOfViewController = @"Wine";
     self.conversionCalculator = [[CalculateAlcoholConversion alloc] init];
 }
 
@@ -41,7 +40,6 @@
     [self.conversionCalculator updateBeerAlcoholContent: ( enteredNumber / 100 ) ];
     
     [self updateTitle];
-    
     [self updateLabel];
     
 }
@@ -54,7 +52,6 @@
     self.conversionCalculator.numberOfBeers = self.beerCountSlider.value;
     
     [self updateTitle];
-    
     [self updateLabel];
 }
 
@@ -64,7 +61,7 @@
 }
 
 - (void)updateTitle {
-     self.navigationItem.title = [NSString stringWithFormat:@"%@ (%.1f %@)", self.nameOfViewController, [self.conversionCalculator convertBeerToWine], [self.conversionCalculator vesselDescription:self.nameOfViewController]];
+     self.navigationItem.title = [NSString stringWithFormat:@"%@ (%.1f %@)", self.title, [self.conversionCalculator convertBeerTo:self.title], [self.conversionCalculator vesselDescription:self.title]];
 }
 
 - (void)updateLabel {
@@ -74,9 +71,9 @@
                                    self.conversionCalculator.numberOfBeers,
                                    [self.conversionCalculator vesselDescription:@"Beer"],
                                    ( self.conversionCalculator.beerAlcoholPercentageContent * 100 ),
-                                   [self.conversionCalculator convertBeerToWine],
-                                   [self.conversionCalculator vesselDescription:self.nameOfViewController],
-                                   self.nameOfViewController
+                                   [self.conversionCalculator convertBeerTo:self.title],
+                                   [self.conversionCalculator vesselDescription:self.title],
+                                   self.title
                            ];
 }
 
