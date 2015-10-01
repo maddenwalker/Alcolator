@@ -10,7 +10,5 @@
 
 @interface Beer : AlcoholicBeverage
 
-- (NSString *)vesselDescriptor:(int)numberOfBeers;
-
 @end
 

@@ -20,8 +20,8 @@
     return self;
 }
 
-- (NSString *)vesselDescriptor:(NSNumber *)numberOfShots {
-    if ( [ numberOfShots floatValue ] == 1) {
+- (NSString *)vesselDescriptorForQuantity:(NSString *)quantityOfBeverages {
+    if ( [ quantityOfBeverages floatValue ] == 1) {
         return NSLocalizedString(@"shot", @"singular shot");
     } else {
         return NSLocalizedString(@"shots", @"plural of shot");

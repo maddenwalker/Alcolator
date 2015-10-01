@@ -14,12 +14,20 @@
     return ( self.alcoholicPercentage * self.typicalSizeOfServing );
 }
 
-- (float)convertAlcoholicServings:(float)ouncesOfAlcohol {
+- (float)alcoholServingsPerOunces:(float)ouncesOfAlcohol {
     return ( ouncesOfAlcohol / self.ouncesOfAlcoholPerServing );
 }
 
-- (float)ouncesOfAlcoholTotal:(float)numberOfBeverages {
+- (float)ouncesOfAlcoholTotalForNumberOfBeverages:(float)numberOfBeverages {
     return ( numberOfBeverages * self.ouncesOfAlcoholPerServing );
+}
+
+- (NSString *)vesselDescriptorForQuantity:(NSString *)quantityOfBeverages {
+    if ( [quantityOfBeverages floatValue] == 1) {
+        return NSLocalizedString(@"glass", @"singular glass");
+    } else {
+        return NSLocalizedString(@"glasses", @"plural of glass");
+    }
 }
 
 @end

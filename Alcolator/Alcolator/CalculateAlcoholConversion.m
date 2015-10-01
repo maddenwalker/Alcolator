@@ -43,9 +43,9 @@
 -(float)convertBeerTo:(NSString *)typeOfAlcohol {
     
     if ( [typeOfAlcohol isEqualToString:@"Wine"] ) {
-        return [self.myWine convertAlcoholicServings:[self.myBeer ouncesOfAlcoholTotal:self.numberOfBeers]];
+        return [self.myWine alcoholServingsPerOunces:[self.myBeer ouncesOfAlcoholTotalForNumberOfBeverages:self.numberOfBeers]];
     } else {
-        return [self.myWhiskey convertAlcoholicServings:[self.myBeer ouncesOfAlcoholTotal:self.numberOfBeers]];
+        return [self.myWhiskey alcoholServingsPerOunces:[self.myBeer ouncesOfAlcoholTotalForNumberOfBeverages:self.numberOfBeers]];
     }
 
 }
@@ -53,11 +53,11 @@
 -(NSString *)vesselDescription:(NSString *)typeOfAlcohol {
     
     if ( [typeOfAlcohol isEqualToString:@"Wine"] ) {
-        return [self.myWine vesselDescriptor:[NSNumber numberWithFloat:[self convertBeerTo:@"Wine"]]];
+        return [self.myWine vesselDescriptorForQuantity:[NSNumber numberWithFloat:[self convertBeerTo:@"Wine"]]];
     } else if ( [typeOfAlcohol isEqualToString:@"Whiskey"] ) {
-        return [self.myWhiskey vesselDescriptor:[NSNumber numberWithFloat:[self convertBeerTo:@"Whiskey"]]];
+        return [self.myWhiskey vesselDescriptorForQuantity:[NSNumber numberWithFloat:[self convertBeerTo:@"Whiskey"]]];
     } else {
-        return [self.myBeer vesselDescriptor:self.numberOfBeers];
+        return [self.myBeer vesselDescriptorForQuantity:[NSNumber numberWithInt:self.numberOfBeers]];
     }
         
 }

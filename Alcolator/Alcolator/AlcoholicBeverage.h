@@ -15,7 +15,8 @@
 @property float typicalSizeOfServing;
 
 - (float)ouncesOfAlcoholPerServing;
-- (float)convertAlcoholicServings:(float)ouncesOfAlcohol;
-- (float)ouncesOfAlcoholTotal:(float)numberOfBeverages;
+- (float)alcoholServingsPerOunces:(float)ouncesOfAlcohol;
+- (float)ouncesOfAlcoholTotalForNumberOfBeverages:(float)numberOfBeverages;
+- (NSString *)vesselDescriptorForQuantity:(NSNumber *)quantityOfBeverages;
 
 @end

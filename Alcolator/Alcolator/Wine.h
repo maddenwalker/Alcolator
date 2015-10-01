@@ -10,6 +10,5 @@
 
 @interface Wine : AlcoholicBeverage
 
-- (NSString *)vesselDescriptor:(NSNumber *)numberOfGlasses;
 
 @end

@@ -20,13 +20,5 @@
     return self;
 }
 
-- (NSString *)vesselDescriptor:(NSNumber *)numberOfGlasses {
-    if ( [numberOfGlasses floatValue] == 1) {
-        return NSLocalizedString(@"glass", @"singular glass");
-    } else {
-        return NSLocalizedString(@"glasses", @"plural of glass");
-    }
-}
-
 
 @end

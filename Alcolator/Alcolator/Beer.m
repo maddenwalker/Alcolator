@@ -20,8 +20,8 @@
     return self;
 }
 
-- (NSString *)vesselDescriptor:(int)numberOfBeers {
-    if ( numberOfBeers == 1 ) {
+- (NSString *)vesselDescriptorForQuantity:(NSString *)quantityOfBeverages {
+    if ( [quantityOfBeverages intValue] == 1 ) {
         return NSLocalizedString(@"beer", @"singular beer");
     } else {
         return NSLocalizedString(@"beers", @"plural of beer");

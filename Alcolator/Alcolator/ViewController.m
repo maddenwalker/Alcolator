@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.conversionCalculator = [[CalculateAlcoholConversion alloc] init];
+    //refactor code to move instantiation of beer and wine here and then use below vs. having to create a new property every time someone changes the slider or text
 }
 
 - (void)didReceiveMemoryWarning {

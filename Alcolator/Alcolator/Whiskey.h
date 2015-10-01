@@ -10,6 +10,5 @@
 
 @interface Whiskey : AlcoholicBeverage
 
-- (NSString *)vesselDescriptor:(NSNumber *)numberOfShots;
 
 @end
