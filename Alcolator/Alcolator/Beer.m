@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         self.typicalSizeOfServing = 12;
-        self.alcoholicPercentage = 0.7;
+        self.alcoholicPercentage = 0.07;
     }
     return self;
 }

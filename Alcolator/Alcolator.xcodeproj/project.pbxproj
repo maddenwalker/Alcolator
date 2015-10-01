@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C01AC231BBC8E1D003FFB76 /* CalculateAlcoholConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C01AC221BBC8E1D003FFB76 /* CalculateAlcoholConversion.m */; settings = {ASSET_TAGS = (); }; };
 		8C5EA5771BBB97E000B07205 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EA5761BBB97E000B07205 /* main.m */; };
 		8C5EA57A1BBB97E000B07205 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EA5791BBB97E000B07205 /* AppDelegate.m */; };
 		8C5EA57D1BBB97E000B07205 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EA57C1BBB97E000B07205 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C01AC211BBC8E1D003FFB76 /* CalculateAlcoholConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculateAlcoholConversion.h; sourceTree = "<group>"; };
+		8C01AC221BBC8E1D003FFB76 /* CalculateAlcoholConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculateAlcoholConversion.m; sourceTree = "<group>"; };
 		8C5EA5721BBB97E000B07205 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5EA5761BBB97E000B07205 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C5EA5781BBB97E000B07205 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C01AC241BBCA50F003FFB76 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8C01AC211BBC8E1D003FFB76 /* CalculateAlcoholConversion.h */,
+				8C01AC221BBC8E1D003FFB76 /* CalculateAlcoholConversion.m */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		8C5EA5691BBB97DF00B07205 = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				8CE342F91BBC5CBF00F7681B /* Model */,
-				8CE342F71BBC5C9B00F7681B /* View */,
-				8CE342F81BBC5CA100F7681B /* Controller */,
+				8CE342F71BBC5C9B00F7681B /* Controller */,
+				8CE342F81BBC5CA100F7681B /* View */,
+				8C01AC241BBCA50F003FFB76 /* Helper Classes */,
 				8C5EA5781BBB97E000B07205 /* AppDelegate.h */,
 				8C5EA5791BBB97E000B07205 /* AppDelegate.m */,
 				8C5EA57E1BBB97E000B07205 /* Main.storyboard */,
@@ -159,7 +172,7 @@
 			path = AlcolatorUITests;
 			sourceTree = "<group>";
 		};
-		8CE342F71BBC5C9B00F7681B /* View */ = {
+		8CE342F71BBC5C9B00F7681B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				8CE979941BBC7C0500B65117 /* MainMenuViewController.h */,
@@ -169,14 +182,14 @@
 				8CD08AF41BBC487400E5E6A8 /* WhiskeyViewController.h */,
 				8CD08AF51BBC487400E5E6A8 /* WhiskeyViewController.m */,
 			);
-			name = View;
+			name = Controller;
 			sourceTree = "<group>";
 		};
-		8CE342F81BBC5CA100F7681B /* Controller */ = {
+		8CE342F81BBC5CA100F7681B /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Controller;
+			name = View;
 			sourceTree = "<group>";
 		};
 		8CE342F91BBC5CBF00F7681B /* Model */ = {
@@ -329,6 +342,7 @@
 				8C5EA57D1BBB97E000B07205 /* ViewController.m in Sources */,
 				8CD08AF61BBC487400E5E6A8 /* WhiskeyViewController.m in Sources */,
 				8CE979961BBC7C0500B65117 /* MainMenuViewController.m in Sources */,
+				8C01AC231BBC8E1D003FFB76 /* CalculateAlcoholConversion.m in Sources */,
 				8CE342FF1BBC5EFF00F7681B /* Beer.m in Sources */,
 				8C5EA57A1BBB97E000B07205 /* AppDelegate.m in Sources */,
 				8CE343021BBC606C00F7681B /* Wine.m in Sources */,

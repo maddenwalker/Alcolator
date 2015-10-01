@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Alcohol Content per Beer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-hl-kPV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="7%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-hl-kPV">
                                 <rect key="frame" x="20" y="74" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -31,18 +31,8 @@
                                     <action selector="sliderValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="6xp-bJ-aU4"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-gs-cFU">
-                                <rect key="frame" x="240" y="164" width="120" height="45"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
-                                <state key="normal" title="Calculate!">
-                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4pj-Q7-Lao"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-55-JBA">
-                                <rect key="frame" x="35" y="230" width="530" height="29"/>
+                                <rect key="frame" x="35" y="182" width="530" height="29"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -52,14 +42,12 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="XcM-55-JBA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="0Ti-ZX-iR0"/>
-                            <constraint firstItem="2Ny-gs-cFU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8qb-uB-oCq"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DIm-P6-oIp"/>
-                            <constraint firstItem="XcM-55-JBA" firstAttribute="top" secondItem="2Ny-gs-cFU" secondAttribute="bottom" constant="21" id="E3a-Uv-Dlp"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="width" secondItem="Oyf-hl-kPV" secondAttribute="width" id="Qho-Ja-2U6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XcM-55-JBA" secondAttribute="trailing" constant="15" id="YGH-5S-Ocv"/>
                             <constraint firstItem="Oyf-hl-kPV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ZDH-25-AdM"/>
                             <constraint firstItem="nb0-Lb-KMF" firstAttribute="top" secondItem="Oyf-hl-kPV" secondAttribute="bottom" constant="8" id="buc-1J-ljq"/>
-                            <constraint firstItem="2Ny-gs-cFU" firstAttribute="top" secondItem="nb0-Lb-KMF" secondAttribute="bottom" constant="22" id="kFD-HL-sjz"/>
+                            <constraint firstItem="XcM-55-JBA" firstAttribute="top" secondItem="nb0-Lb-KMF" secondAttribute="bottom" constant="40" id="cNG-Fc-UAD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oyf-hl-kPV" secondAttribute="trailing" id="p1U-pN-bej"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Oyf-hl-kPV" secondAttribute="leading" id="zSY-dA-ery"/>
                         </constraints>

@@ -7,18 +7,22 @@
 //
 
 #import "ViewController.h"
-#import "Beer.h"
-#import "Wine.h"
+#import "CalculateAlcoholConversion.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) CalculateAlcoholConversion *conversionCalculator;
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.nameOfViewController = @"Wine";
+    self.conversionCalculator = [[CalculateAlcoholConversion alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +38,12 @@
         sender.text = nil;
     }
     
+    [self.conversionCalculator updateBeerAlcoholContent: ( enteredNumber / 100 ) ];
+    
+    [self updateTitle];
+    
+    [self updateLabel];
+    
 }
 
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
@@ -41,37 +51,33 @@
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
     
+    self.conversionCalculator.numberOfBeers = self.beerCountSlider.value;
+    
+    [self updateTitle];
+    
+    [self updateLabel];
 }
 
-- (IBAction)buttonPressed:(UIButton *)sender {
-    
-    [self.beerPercentTextField resignFirstResponder];
-    
-    //calculate the amount of alcohol in the beer
-    int numberOfBeers = self.beerCountSlider.value;
-    
-    Beer *myBeer = [[Beer alloc] init];
-    
-    //change default alcoholic percentage
-    myBeer.alcoholicPercentage = [self.beerPercentTextField.text floatValue] / 100;
-
-    //now calculate the equivalent of wine . . .
-    Wine *myWine = [[Wine alloc] init];
-    float numberOfWineGlassesEquivalentToNumberOfBeers = [myWine convertAlcoholicServings:[myBeer ouncesOfAlcoholTotal:numberOfBeers]];
-    
-    //create final text string and put in the label
-    self.resultLabel.text = [NSString stringWithFormat:
-                             NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil),
-                                 numberOfBeers,
-                                 [myBeer vesselDescriptor:numberOfBeers],
-                                 [self.beerPercentTextField.text floatValue],
-                                 numberOfWineGlassesEquivalentToNumberOfBeers,
-                                 [myWine vesselDescriptor:[NSNumber numberWithFloat:numberOfWineGlassesEquivalentToNumberOfBeers]]
-                             ];
-}
 
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {
     [self.beerPercentTextField resignFirstResponder];
+}
+
+- (void)updateTitle {
+     self.navigationItem.title = [NSString stringWithFormat:@"%@ (%.1f %@)", self.nameOfViewController, [self.conversionCalculator convertBeerToWine], [self.conversionCalculator vesselDescription:self.nameOfViewController]];
+}
+
+- (void)updateLabel {
+    
+    self.resultLabel.text = [NSString stringWithFormat:
+                               NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of %@.", nil),
+                                   self.conversionCalculator.numberOfBeers,
+                                   [self.conversionCalculator vesselDescription:@"Beer"],
+                                   ( self.conversionCalculator.beerAlcoholPercentageContent * 100 ),
+                                   [self.conversionCalculator convertBeerToWine],
+                                   [self.conversionCalculator vesselDescription:self.nameOfViewController],
+                                   self.nameOfViewController
+                           ];
 }
 
 @end
