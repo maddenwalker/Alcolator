@@ -54,7 +54,7 @@
     
     [self updateTitle];
     [self updateLabel];
-    [self updateTabBarBadge:sender];
+    [self updateTabBarBadge];
 }
 
 
@@ -79,8 +79,9 @@
                            ];
 }
 
-- (void)updateTabBarBadge:(UISlider *) sliderValue{
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sliderValue.value]];
+- (void)updateTabBarBadge {
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) [self.conversionCalculator convertBeerTo:self.title]]];
+    NSLog(@"%d", (int) [self.conversionCalculator convertBeerTo:self.title]);
 }
 
 @end

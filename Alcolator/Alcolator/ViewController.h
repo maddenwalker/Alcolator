@@ -11,9 +11,6 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) Beer *myBeer;
-@property (strong, nonatomic) Wine *myWine;
-
 @property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
 @property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
