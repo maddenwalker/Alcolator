@@ -54,6 +54,7 @@
     
     [self updateTitle];
     [self updateLabel];
+    [self updateTabBarBadge:sender];
 }
 
 
@@ -76,6 +77,10 @@
                                    [self.conversionCalculator vesselDescription:self.title],
                                    self.title
                            ];
+}
+
+- (void)updateTabBarBadge:(UISlider *) sliderValue{
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sliderValue.value]];
 }
 
 @end
